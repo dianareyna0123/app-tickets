@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\TicketControllerList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +32,12 @@ Route::middleware([
 
 Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('user/list',[UserController::class,'list'])->name('user.list');;
+});
+
+Route::group(['middleware' => 'auth:sanctum'], function(){
+    Route::get('ticket/add',[TicketController::class,'add'])->name('ticket.add');;
+});
+
+Route::group(['middleware' => 'auth:sanctum'], function(){
+    Route::get('ticket/list',[TicketControllerlist::class,'list'])->name('ticket.list');;
 });

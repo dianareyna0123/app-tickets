@@ -12,4 +12,9 @@
             </div>
         </div>
     </div>
+
+    @push('modales')
+    <livewire:live-modal> 
+  
+    @endpush
 </x-app-layout>

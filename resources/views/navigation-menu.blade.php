@@ -16,7 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('user.list') }}" :active="request()->routeIs('user.list')">
-                        {{ __('usuarios') }}
+                        {{ __('Usuarios') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('ticket.add') }}" :active="request()->routeIs('ticket.add')">
+                        {{ __('Agregar Ticket') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('ticket.list') }}" :active="request()->routeIs('ticket.lis')">
+                        {{ __('Lista de Ticket') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -145,6 +151,12 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('user.list') }}" :active="request()->routeIs('user.list')">
                 {{ __('usuarios') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('ticket.add') }}" :active="request()->routeIs('ticket.add')">
+                {{ __('Agregar Ticket') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('ticket.list') }}" :active="request()->routeIs('ticket.lis')">
+                {{ __('Lista de Ticket') }}
             </x-responsive-nav-link>
         </div>
 

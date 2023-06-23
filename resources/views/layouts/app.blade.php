@@ -10,12 +10,17 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        
+       
+ 
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js', '/build/assets/fontawesome/css/all.css'])
 
         <!-- Styles -->
+        <link href="{{asset('fontawesome/css/all.css')}}" rel="stylesheet">
         @livewireStyles
+        <link rel="stylesheet" href="{{asset('assets/fontawesome/css/all.css')}}">
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -38,7 +43,7 @@
             </main>
         </div>
 
-        @stack('modals')
+        @stack('modales')
 
         @livewireScripts
     </body>
